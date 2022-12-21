@@ -1,8 +1,8 @@
 const carousel = document.querySelector(".product-carousel");
 const itemsContainer = carousel.querySelector(".product-carousel-items");
 const items = Array.from(itemsContainer.children);
-const prevButton = carousel.querySelector(".carousel-button-prev");
-const nextButton = carousel.querySelector(".carousel-button-next");
+const prevButton = document.querySelector(".carousel-button-prev");
+const nextButton = document.querySelector(".carousel-button-next");
 
 let currentItemIndex = 0;
 let itemsPerPage = 5.5;
@@ -34,7 +34,7 @@ window.addEventListener("resize", () => {
   if (window.innerWidth < 800) {
     itemsPerPage = 2;
   } else {
-    itemsPerPage = 6;
+    itemsPerPage = 5.5;
   }
   goToItem(currentItemIndex);
 });
