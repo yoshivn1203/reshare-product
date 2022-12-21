@@ -199,6 +199,58 @@
       </div>
     </section>
 
+    <!-- section product grid-->
+    <section class="container">
+      <div class="products">
+        <div class="products__filter">
+          <div class="products__filter__title">
+            <div class="products__filter__title--left">
+              <h5>Filter</h5>
+              <p>XX items</p>
+            </div>
+            <div class="products__filter__title--right">
+              <a href="">Reset All</a>
+            </div>
+          </div>
+
+          <hr />
+          <div class="products__filter__category">
+            <div class="products__filter__category__title">
+              <h5>State</h5>
+              <a
+                class="toggle-category open"
+                data-toggle="collapse"
+                href="#collapseExample"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <img
+                  class="products__filter__category__title__minus"
+                  src="./icon/minus-icon.svg"
+                  alt=""
+                />
+                <img
+                  class="products__filter__category__title__plus"
+                  src="./icon/plus-icon.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="collapse" id="collapseExample">
+            <div class="">
+              Some placeholder content for the collapse component. This panel is
+              hidden by default but revealed when the user activates the
+              relevant trigger.
+            </div>
+          </div>
+        </div>
+        <div class="products__grid"></div>
+      </div>
+    </section>
+
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -211,5 +263,12 @@
     ></script>
 
     <script src="js/product-carousel.js"></script>
+    <script>
+      $(function () {
+        $(".toggle-category").click(function () {
+          $(".toggle-category").toggleClass("open");
+        });
+      });
+    </script>
   </body>
 </html>
