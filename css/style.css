@@ -191,10 +191,10 @@ menu {
 
 .product-carousel-item {
   display: flex;
-  flex-direction: column;
   flex: 0 0 calc(18.18181818% - 24px);
-  height: 300px;
   margin: 0 12px;
+  flex-direction: column;
+  height: 300px;
   color: black;
   position: relative;
 }
