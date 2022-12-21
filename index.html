@@ -56,11 +56,21 @@
       <div class="carousel-navigation">
         <h2 class="carousel-navigation-title">Most <span>popular</span></h2>
         <div class="carousel-navigation-btn">
-          <button class="carousel-button carousel-button-prev">
-            <img src="./icon/arrow-left.svg" alt="" />
+          <button class="carousel-button carousel-button-prev disable">
+            <img class="arrow-left" src="./icon/arrow-left.svg" alt="" />
+            <img
+              class="disable-arrow-left"
+              src="./icon/arrow-left-disable.svg"
+              alt=""
+            />
           </button>
           <button class="carousel-button carousel-button-next">
-            <img src="./icon/arrow-right.svg" alt="" />
+            <img class="arrow-right" src="./icon/arrow-right.svg" alt="" />
+            <img
+              class="disable-arrow-right"
+              src="./icon/arrow-right-disable.svg"
+              alt=""
+            />
           </button>
         </div>
       </div>
@@ -220,10 +230,10 @@
               <a
                 class="toggle-category open"
                 data-toggle="collapse"
-                href="#collapseExample"
+                href="#collapseCategory"
                 role="button"
                 aria-expanded="false"
-                aria-controls="collapseExample"
+                aria-controls="collapseCategory"
               >
                 <img
                   class="products__filter__category__title__minus"
@@ -237,13 +247,85 @@
                 />
               </a>
             </div>
-          </div>
-
-          <div class="collapse" id="collapseExample">
-            <div class="">
-              Some placeholder content for the collapse component. This panel is
-              hidden by default but revealed when the user activates the
-              relevant trigger.
+            <div class="collapse show" id="collapseCategory">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="sa"
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label" for="defaultCheck1">
+                  SA (21)
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="vic"
+                  id="defaultCheck2"
+                />
+                <label class="form-check-label" for="defaultCheck2">
+                  VIC (12)
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="nsw"
+                  id="defaultCheck3"
+                  checked
+                />
+                <label class="form-check-label" for="defaultCheck3">
+                  NSW (36)
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="qld"
+                  id="defaultCheck4"
+                />
+                <label class="form-check-label" for="defaultCheck4">
+                  QLD (04)
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="wa"
+                  id="defaultCheck5"
+                />
+                <label class="form-check-label" for="defaultCheck5">
+                  WA (08)
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="tas"
+                  id="defaultCheck6"
+                />
+                <label class="form-check-label" for="defaultCheck6">
+                  TAS (14)
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="act"
+                  id="defaultCheck7"
+                />
+                <label class="form-check-label" for="defaultCheck7">
+                  ACT (05)
+                </label>
+              </div>
             </div>
           </div>
         </div>

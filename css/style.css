@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
-/* Reset css */
+/* RESET CSS */
 
 *,
 *::before,
@@ -39,9 +39,10 @@ ul,
 menu {
   list-style: none;
 }
-/* Reset css */
 
-/* global style */
+/* RESET CSS */
+
+/* GLOBAL STYLE */
 .container {
   width: 100%;
   max-width: 1920px;
@@ -69,9 +70,65 @@ menu {
   color: #000000;
 }
 
-/* global style */
+/* overwrite bootstrap check box style */
+.form-check ~ .form-check {
+  margin-top: 16px;
+}
 
-/* section 1 */
+.form-check-input {
+  height: 24px;
+  width: 24px;
+  margin-top: 0;
+}
+
+.form-check-label {
+  margin-left: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form-check-label::before {
+  content: "";
+  position: absolute;
+  border: 2px #808080 solid;
+  border-radius: 2px;
+  background-color: white;
+  background-image: none;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+}
+
+.form-check .form-check-input:checked ~ .form-check-label::before {
+  content: "";
+  position: absolute;
+  border: 2px #1e9fd0 solid;
+  border-radius: 2px;
+  background-color: white;
+  background-image: none;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+}
+
+.form-check .form-check-input:checked ~ .form-check-label::after {
+  content: "";
+  color: #678000;
+  position: absolute;
+  background-color: #1e9fd0;
+  background-image: none;
+  top: 5px;
+  left: 5px;
+  height: 14px;
+  width: 14px;
+}
+
+/* GLOBAL STYLE */
+
+/* section submenu */
 .btn-container {
   display: flex;
   align-items: center;
@@ -81,7 +138,7 @@ menu {
   padding-bottom: 16px;
 }
 
-/* section 2 */
+/* section breadcrumb */
 .breadcrumb {
   background: transparent;
   padding-left: 0;
@@ -106,7 +163,7 @@ menu {
   padding-left: 20px;
 }
 
-/* section 3 */
+/* section header */
 
 .header-title {
   margin-top: 60px;
@@ -125,7 +182,7 @@ menu {
   line-height: 28px;
 }
 
-/* section 4 */
+/* section most popular */
 .carousel-navigation {
   display: flex;
   align-items: center;
@@ -161,6 +218,10 @@ menu {
   place-items: center;
 }
 
+.carousel-button.disable {
+  cursor: unset;
+}
+
 .carousel-button:hover,
 .carousel-button:focus {
   opacity: 1;
@@ -170,6 +231,31 @@ menu {
   left: 20px;
 }
 
+.carousel-button-prev.disable .disable-arrow-left {
+  display: block;
+}
+.carousel-button-prev.disable .arrow-left {
+  display: none;
+}
+.carousel-button-prev .disable-arrow-left {
+  display: none;
+}
+.carousel-button-prev .arrow-left {
+  display: block;
+}
+.carousel-button-next.disable .disable-arrow-right {
+  display: block;
+}
+.carousel-button-next.disable .arrow-right {
+  display: none;
+}
+.carousel-button-next .disable-arrow-right {
+  display: none;
+}
+.carousel-button-next .arrow-right {
+  display: block;
+}
+
 .carousel-button-next {
   right: 20px;
 }
@@ -177,7 +263,13 @@ menu {
 .product-carousel {
   width: 100%;
   margin-top: 40px;
-  overflow: hidden;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+.product-carousel.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  scroll-snap-type: unset;
 }
 
 .product-carousel-items {
@@ -273,7 +365,7 @@ menu {
   }
 }
 
-/* section 5 */
+/* section product grid */
 .products {
   display: flex;
   align-items: start;
@@ -331,6 +423,7 @@ menu {
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .products__filter__category__title h5 {
@@ -340,15 +433,15 @@ menu {
 }
 
 .toggle-category.open .products__filter__category__title__minus {
-  display: none;
+  display: block;
 }
 .toggle-category.open .products__filter__category__title__plus {
-  display: block;
+  display: none;
 }
 
 .toggle-category .products__filter__category__title__minus {
-  display: block;
+  display: none;
 }
 .toggle-category .products__filter__category__title__plus {
-  display: none;
+  display: block;
 }
