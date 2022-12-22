@@ -486,20 +486,180 @@
         </div>
         <div class="products__grid">
           <div class="products__grid__searchAndSort">
-            <input
-              type="text"
-              name="searchProduct"
-              id="searchProduct"
-              placeholder="Seach by keywords"
-            />
-
-            <select name="cars" id="cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select>
+            <div class="products__grid__searchAndSort--search-form">
+              <input
+                type="text"
+                name="searchProduct"
+                id="searchProduct"
+                placeholder="Seach by keywords"
+              />
+              <img src="./icon/search-icon.svg" alt="" class="search-icon" />
+            </div>
+            <div class="products__grid__searchAndSort--sort-form">
+              <select name="cars" id="cars">
+                <option value="relevance">Relevance</option>
+                <option value="saab">Rating</option>
+                <option value="mercedes">Price</option>
+                <option value="audi">Order</option>
+              </select>
+              <img
+                src="./icon/dropdown-icon.svg"
+                alt=""
+                class="dropdown-icon"
+              />
+            </div>
           </div>
+          <div class="products__grid__content">
+            <div class="product__grid__item">
+              <img
+                src="./img/product-placeholder.png"
+                alt="product-grid-item"
+                class="grid__image"
+              />
+              <p class="product__grid__item__price">$XX/day</p>
+              <p class="product__grid__item__title">
+                Title with 2 lines Title with
+              </p>
+              <p class="product__grid__item__location">Sydney, NSW</p>
+              <div class="product__grid__item__rating">
+                <img src="./icon//star.svg" alt="" />
+                <span>XX</span>
+              </div>
+            </div>
+            <div class="product__grid__item">
+              <img
+                src="./img/product-placeholder.png"
+                alt="product-grid-item"
+                class="grid__image"
+              />
+              <p class="product__grid__item__price">$XX/day</p>
+              <p class="product__grid__item__title">
+                Title with 2 lines Title with
+              </p>
+              <p class="product__grid__item__location">Sydney, NSW</p>
+              <div class="product__grid__item__rating">
+                <img src="./icon//star.svg" alt="" />
+                <span>XX</span>
+              </div>
+            </div>
+            <div class="product__grid__item">
+              <img
+                src="./img/product-placeholder.png"
+                alt="product-grid-item"
+                class="grid__image"
+              />
+              <p class="product__grid__item__price">$XX/day</p>
+              <p class="product__grid__item__title">
+                Title with 2 lines Title with
+              </p>
+              <p class="product__grid__item__location">Sydney, NSW</p>
+              <div class="product__grid__item__rating">
+                <img src="./icon//star.svg" alt="" />
+                <span>XX</span>
+              </div>
+            </div>
+            <div class="product__grid__item">
+              <img
+                src="./img/product-placeholder.png"
+                alt="product-grid-item"
+                class="grid__image"
+              />
+              <p class="product__grid__item__price">$XX/day</p>
+              <p class="product__grid__item__title">
+                Title with 2 lines Title with
+              </p>
+              <p class="product__grid__item__location">Sydney, NSW</p>
+              <div class="product__grid__item__rating">
+                <img src="./icon//star.svg" alt="" />
+                <span>XX</span>
+              </div>
+            </div>
+            <div class="product__grid__item">
+              <img
+                src="./img/product-placeholder.png"
+                alt="product-grid-item"
+                class="grid__image"
+              />
+              <p class="product__grid__item__price">$XX/day</p>
+              <p class="product__grid__item__title">
+                Title with 2 lines Title with
+              </p>
+              <p class="product__grid__item__location">Sydney, NSW</p>
+              <div class="product__grid__item__rating">
+                <img src="./icon//star.svg" alt="" />
+                <span>XX</span>
+              </div>
+            </div>
+            <div class="product__grid__item">
+              <img
+                src="./img/product-placeholder.png"
+                alt="product-grid-item"
+                class="grid__image"
+              />
+              <p class="product__grid__item__price">$XX/day</p>
+              <p class="product__grid__item__title">
+                Title with 2 lines Title with
+              </p>
+              <p class="product__grid__item__location">Sydney, NSW</p>
+              <div class="product__grid__item__rating">
+                <img src="./icon//star.svg" alt="" />
+                <span>XX</span>
+              </div>
+            </div>
+            <div class="product__grid__item">
+              <img
+                src="./img/product-placeholder.png"
+                alt="product-grid-item"
+                class="grid__image"
+              />
+              <p class="product__grid__item__price">$XX/day</p>
+              <p class="product__grid__item__title">
+                Title with 2 lines Title with
+              </p>
+              <p class="product__grid__item__location">Sydney, NSW</p>
+              <div class="product__grid__item__rating">
+                <img src="./icon//star.svg" alt="" />
+                <span>XX</span>
+              </div>
+            </div>
+            <div class="product__grid__item">
+              <img
+                src="./img/product-placeholder.png"
+                alt="product-grid-item"
+                class="grid__image"
+              />
+              <p class="product__grid__item__price">$XX/day</p>
+              <p class="product__grid__item__title">
+                Title with 2 lines Title with
+              </p>
+              <p class="product__grid__item__location">Sydney, NSW</p>
+              <div class="product__grid__item__rating">
+                <img src="./icon//star.svg" alt="" />
+                <span>XX</span>
+              </div>
+            </div>
+          </div>
+          <nav aria-label="pagination" class="products__grid__pagination">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link"
+                  ><img src="./icon/arrow-left-pagi.svg" alt=""
+                /></a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">...</a></li>
+              <li class="page-item"><a class="page-link" href="#">9</a></li>
+              <li class="page-item"><a class="page-link" href="#">10</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#"
+                  ><img src="./icon/arrow-right-pagi.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </section>
