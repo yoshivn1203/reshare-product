@@ -953,6 +953,10 @@ menu {
   margin-bottom: 16px;
 }
 
+.menu__filter .products__grid__searchAndSort--sort-form {
+  display: block;
+}
+
 .menu__filter .products__filter__price input,
 .menu__filter .products__grid__searchAndSort--sort-form select {
   height: 36px;
