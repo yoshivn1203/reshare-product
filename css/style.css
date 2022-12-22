@@ -49,6 +49,17 @@ menu {
   padding: 0 70px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -148,6 +159,13 @@ menu {
   padding-bottom: 16px;
 }
 
+@media only screen and (max-width: 375px) {
+  .btn-container {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
 /* section breadcrumb */
 .breadcrumb {
   background: transparent;
@@ -177,6 +195,18 @@ menu {
 
 .header-title {
   margin-top: 60px;
+  width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .header-title {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .header-title {
+    margin-top: 16px;
+  }
 }
 
 .header-title h1 {
@@ -368,9 +398,21 @@ menu {
   margin-top: 4px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
+  .product-carousel-item {
+    flex: 0 0 calc(33.33333% - 24px);
+  }
+}
+
+@media (max-width: 768px) {
   .product-carousel-item {
     flex: 0 0 calc(50% - 24px);
+  }
+}
+
+@media (max-width: 375px) {
+  .product-carousel-item {
+    flex: 0 0 calc(100% - 24px);
   }
 }
 
@@ -603,11 +645,26 @@ menu {
 .products__grid {
   flex-basis: 75%;
 }
+@media (max-width: 768px) {
+  .products__filter {
+    display: none;
+  }
+  .products__grid {
+    flex-basis: 100%;
+  }
+}
 
 .products__grid__searchAndSort {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .products__grid__searchAndSort {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .products__grid__searchAndSort--search-form {
@@ -677,6 +734,22 @@ menu {
   grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 16px;
   grid-column-gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .products__grid__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .products__grid__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .products__grid__content {
+    grid-template-columns: 1fr;
+  }
 }
 
 .product__grid__item {
@@ -772,6 +845,13 @@ menu {
   align-items: center;
 }
 
+@media only screen and (max-width: 576px) {
+  .products__grid__pagination li.page-item .page-link {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .products__grid__pagination li.page-item .page-link img {
   width: 7px;
   height: 11px;
@@ -786,4 +866,83 @@ menu {
 .products__grid__pagination li.page-item.disabled .page-link {
   background: #d9d9d9;
   opacity: 0.5;
+}
+
+/* test menu */
+.OpenMenuButton {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 900;
+  word-spacing: 140%;
+  letter-spacing: 4px;
+}
+
+.DrawerMenu {
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-120%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: grid;
+  grid-template-areas: "MENU OVERLAY";
+  grid-template-columns: 15fr 5fr;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+[data-menu]:checked ~ .DrawerMenu {
+  transform: none;
+}
+
+.Menu {
+  display: block;
+  flex-flow: column wrap;
+  transform: translateX(-30%);
+  opacity: 0;
+  color: black;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+  contain: content;
+  grid-area: "MENU";
+  background-color: white;
+  box-sizing: border-box;
+  padding: 24px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+[data-menu]:checked ~ .DrawerMenu .Menu {
+  transform: translateX(-7%);
+  opacity: 1;
+  transition-delay: 300ms;
+}
+
+.Menu a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 16px 0;
+}
+
+.Menu > * + * {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.MenuOverlay {
+  display: block;
+  grid-area: "OVERLAY";
+}
+
+[data-menu]:not(:checked) ~ .DrawerMenu .MenuOverlay {
+  pointer-events: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .DrawerMenu,
+  .OpenMenuButton {
+    display: none;
+  }
 }

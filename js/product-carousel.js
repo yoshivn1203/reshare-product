@@ -35,12 +35,25 @@ nextButton.addEventListener("click", () => {
 
 goToItem(currentItemIndex);
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth < 800) {
+const responsiveItems = () => {
+  if (window.innerWidth <= 375) {
+    itemsPerPage = 1;
+  } else if (window.innerWidth <= 768) {
     itemsPerPage = 2;
+  } else if (window.innerWidth <= 1024) {
+    itemsPerPage = 3;
   } else {
     itemsPerPage = 5.5;
   }
+};
+
+window.addEventListener("load", () => {
+  responsiveItems();
+  goToItem(currentItemIndex);
+});
+
+window.addEventListener("resize", () => {
+  responsiveItems();
   goToItem(currentItemIndex);
 });
 
