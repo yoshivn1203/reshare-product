@@ -11,6 +11,22 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+    <!-- owl -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -960,6 +976,89 @@
       </div>
     </section>
 
+    <!-- section from the blog -->
+    <section class="blog">
+      <div class="container"></div>
+    </section>
+
+    <!-- section customer favorite -->
+    <section class="container">
+      <h2 class="favorite__title">Customer <span>favorites</span></h2>
+      <div class="favorite__content">
+        <div class="favorite__content__photo">
+          <div id="owl-agency" class="owl-carousel owl-theme text-center">
+            <div class="ffavorite__content__photo__img" href="#img">
+              <img
+                src="./img/customer-favorite.png"
+                class="img-responsive"
+                alt="team1"
+              />
+            </div>
+            <div class="ffavorite__content__photo__img" href="#img">
+              <img
+                src="./img/customer-favorite.png"
+                class="img-responsive"
+                alt="team1"
+              />
+            </div>
+            <div class="ffavorite__content__photo__img" href="#img">
+              <img
+                src="./img/customer-favorite.png"
+                class="img-responsive"
+                alt="team1"
+              />
+            </div>
+            <div class="ffavorite__content__photo__img" href="#img">
+              <img
+                src="./img/customer-favorite.png"
+                class="img-responsive"
+                alt="team1"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="favorite__content__comment">
+          <div class="favorite__content__comment__title">
+            <img
+              src="./img//avatar.png"
+              alt=""
+              class="favorite__content__comment__title__avatar"
+            />
+            <div class="favorite__content__comment__title__name">
+              <p>honeybee__oz</p>
+              <div class="favorite__content__comment__title__rating">
+                <img src="./icon/yellow-star.svg" alt="" />
+                <img src="./icon/yellow-star.svg" alt="" />
+                <img src="./icon/yellow-star.svg" alt="" />
+                <img src="./icon/yellow-star.svg" alt="" />
+                <img src="./icon/yellow-star.svg" alt="" />
+              </div>
+            </div>
+            <p>.</p>
+            <div class="favorite__content__comment__title__time">
+              5 days ago
+            </div>
+          </div>
+          <div class="favorite__content__comment__text">
+            <span
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+              deserunt dignissimos voluptatem? Molestias nulla facere delectus!
+              Aut est totam quod laudantium, at dolores, eligendi officia magni
+              quisquam, nobis autem. Tempora. Lorem Ipsum is simply dummy text
+              of the printing and typesetting industry</span
+            >
+            <span class="dots">...</span>
+            <span class="more-content">
+              Lorem Ipsum has been the industry's standard dummy text ever since
+              the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book.
+            </span>
+            <a class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -971,22 +1070,30 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="js/product-carousel.js"></script>
+    <!-- owl -->
+    <script src="./js/owl.carousel.min.js"></script>
     <script>
-      $(function () {
-        $(".toggle-category").click(function () {
-          $(".toggle-category").toggleClass("open");
-        });
-        $(".toggle-price").click(function () {
-          $(".toggle-price").toggleClass("open");
-        });
-        $(".toggle-subcategory").click(function () {
-          $(".toggle-subcategory").toggleClass("open");
-        });
-        $(".toggle-othercategory").click(function () {
-          $(".toggle-othercategory").toggleClass("open");
+      $(document).ready(function () {
+        $("#owl-agency").owlCarousel({
+          loop: true,
+          nav: false,
+          margin: 50,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false,
+            },
+            736: {
+              items: 1,
+              nav: false,
+            },
+          },
         });
       });
     </script>
+    <!-- owl -->
+    <script src="js/product-carousel.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
