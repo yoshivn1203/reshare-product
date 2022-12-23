@@ -11,6 +11,21 @@ $(function () {
   $(".toggle-othercategory").click(function () {
     $(".toggle-othercategory").toggleClass("open");
   });
+  $(".toggle-faq").click(function () {
+    $(".toggle-faq").toggleClass("open");
+  });
+  $(".toggle-faq2").click(function () {
+    $(".toggle-faq2").toggleClass("open");
+  });
+  $(".toggle-faq3").click(function () {
+    $(".toggle-faq3").toggleClass("open");
+  });
+  $(".toggle-faq4").click(function () {
+    $(".toggle-faq4").toggleClass("open");
+  });
+  $(".toggle-faq5").click(function () {
+    $(".toggle-faq5").toggleClass("open");
+  });
   $(".read-more").click(function () {
     $(this).prev().toggle();
     $(this).siblings(".dots").toggle();

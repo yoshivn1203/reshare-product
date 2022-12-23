@@ -159,7 +159,7 @@ menu {
   padding-bottom: 16px;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 576px) {
   .btn-container {
     flex-direction: column;
     align-items: start;
@@ -536,6 +536,11 @@ menu {
   align-items: center;
 }
 
+.products__filter__price__group p {
+  margin-bottom: 0;
+  height: 100%;
+}
+
 .products__filter__price input[type="number"] {
   width: 46%;
   height: 56px;
@@ -820,12 +825,15 @@ menu {
   font-size: 20px;
   line-height: 28px;
   margin-top: 4px;
-  /* overflow: hidden; */
+  margin-bottom: 0;
+
+  /* overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
+  height: 90px; */
 }
 
 .product__grid__item__location {
@@ -971,7 +979,6 @@ menu {
 /* section blog */
 
 .blog {
-  height: 500px;
   margin-top: 64px;
   background-color: #f9f9f9;
 }
@@ -1004,6 +1011,69 @@ menu {
   width: 17.5px;
   height: 10px;
   margin-left: 6px;
+}
+
+.blog__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .blog__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 576px) {
+  .blog__cards {
+    grid-template-columns: 1fr;
+  }
+  .blog__card:nth-child(3),
+  .blog__card:nth-child(4) {
+    display: none;
+  }
+}
+
+.blog__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__card__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 24px;
+}
+
+.blog__card__content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 16px;
+}
+
+.blog__card__author {
+  margin-top: 16px;
+  margin-bottom: 64px;
+}
+
+.blog__card__author span:first-child {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #9e9e9e;
+}
+
+.blog__card__author__name {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.blog__card__img img {
+  width: 100%;
 }
 
 /* section customer favorite */
@@ -1113,4 +1183,77 @@ menu {
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
   background: #000000;
+}
+
+.product__faq {
+  margin-top: 84px;
+  width: 50%;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+@media only screen and (max-width: 1024px) {
+  .product__faq {
+    width: 100%;
+  }
+}
+
+.product__faq__title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  padding-bottom: 24px;
+}
+
+.product__faq__content__title {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 16px;
+  margin-bottom: 16px;
+  border-top: 1px solid #d9d9d9;
+}
+
+.product__faq__content__title h5 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.toggle-faq.open .product__faq__content__title__minus,
+.toggle-faq2.open .product__faq__content__title__minus,
+.toggle-faq3.open .product__faq__content__title__minus,
+.toggle-faq4.open .product__faq__content__title__minus,
+.toggle-faq5.open .product__faq__content__title__minus {
+  display: block;
+}
+.toggle-faq.open .product__faq__content__title__plus,
+.toggle-faq2.open .product__faq__content__title__plus,
+.toggle-faq3.open .product__faq__content__title__plus,
+.toggle-faq4.open .product__faq__content__title__plus,
+.toggle-faq5.open .product__faq__content__title__plus {
+  display: none;
+}
+
+.toggle-faq .product__faq__content__title__minus,
+.toggle-faq2 .product__faq__content__title__minus,
+.toggle-faq3 .product__faq__content__title__minus,
+.toggle-faq4 .product__faq__content__title__minus,
+.toggle-faq5 .product__faq__content__title__minus {
+  display: none;
+}
+.toggle-faq .product__faq__content__title__plus,
+.toggle-faq2 .product__faq__content__title__plus,
+.toggle-faq3 .product__faq__content__title__plus,
+.toggle-faq4 .product__faq__content__title__plus,
+.toggle-faq5 .product__faq__content__title__plus {
+  display: block;
+}
+
+.product__faq__content__collapse {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
 }
