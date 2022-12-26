@@ -76,6 +76,19 @@ menu {
   line-height: 24px;
 }
 
+.btn-outline-primary {
+  border: 1px solid #1e9fd0;
+  border-radius: 8px;
+  color: #1e9fd0;
+  padding: 12px 24px;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #0991e0;
+  border-color: #0991e0;
+}
+
 .btn-secondary {
   background: #eeeeee;
   border-radius: 8px;
