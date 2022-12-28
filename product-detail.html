@@ -40,7 +40,7 @@
 
   <body>
     <!-- section submenu -->
-    <section class="container btn-container">
+    <section class="container-product btn-container-product">
       <button type="button" class="btn btn-secondary">
         <img src="./icon/menu-icon.svg" alt="category" />
         <span>Categories</span>
@@ -53,7 +53,7 @@
 
     <!-- section breadcrumb -->
 
-    <section class="container">
+    <section class="container-product">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -63,7 +63,7 @@
     </section>
 
     <!-- section header -->
-    <section class="container">
+    <section class="container-product">
       <div class="header__title">
         <h1>Ingenuity ConvertMe baby bouncer</h1>
         <div class="header__title__seller">
@@ -79,7 +79,7 @@
     </section>
 
     <!-- section most image gallery-->
-    <section class="container">
+    <section class="container-product">
       <div class="product__detail">
         <div class="product__detail__gallery">
           <input type="radio" checked="checked" name="select" id="img-tab-1" />
@@ -301,7 +301,7 @@
     </section>
 
     <!-- section most image gallery-->
-    <section class="container">
+    <section class="container-product">
       <div class="product__detail__content">
         <div class="product__detail__content__item">
           <h3 class="product__detail__content__item__title">Description</h3>
@@ -345,7 +345,7 @@
     </section>
 
     <!-- section review-->
-    <section class="container">
+    <section class="container-product">
       <div class="product__review">
         <h3 class="product__review__section">Review</h3>
         <h3 class="product__review__stats">
@@ -453,7 +453,7 @@
     </section>
 
     <!-- section customer FAQs  -->
-    <section class="container">
+    <section class="container-product">
       <div class="product__detail__faq">
         <div class="product__faq__title">FAQs</div>
         <div class="product__faq__content">
@@ -639,19 +639,19 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
     <script>
-      $("label:lt(4)").show();
-      $("#gallery-btn").on("click", function (event) {
-        var $hidden = $("label:hidden");
+      $('label:lt(4)').show();
+      $('#gallery-btn').on('click', function (event) {
+        var $hidden = $('label:hidden');
         $($hidden).fadeIn(800);
         $(this).hide();
       });
 
       $(function () {
-        $("#datepicker").datepicker({
-          dateFormat: "mm/dd/yy",
+        $('#datepicker').datepicker({
+          dateFormat: 'mm/dd/yy',
         });
-        $("#datepicker2").datepicker({
-          dateFormat: "mm/dd/yy",
+        $('#datepicker2').datepicker({
+          dateFormat: 'mm/dd/yy',
         });
       });
     </script>
