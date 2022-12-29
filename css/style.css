@@ -60,14 +60,14 @@ menu {
   }
 }
 
-.btn {
+.container-product .btn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 }
 
-.btn-primary {
+.container-product .btn-primary {
   background: #0991e0;
   border-radius: 8px;
   padding: 12px 24px;
@@ -76,20 +76,20 @@ menu {
   line-height: 24px;
 }
 
-.btn-outline-primary {
+.container-product .btn-outline-primary {
   border: 1px solid #1e9fd0;
   border-radius: 8px;
   color: #1e9fd0;
   padding: 12px 24px;
 }
 
-.btn-outline-primary:hover {
+.container-product .btn-outline-primary:hover {
   color: #fff;
   background-color: #0991e0;
   border-color: #0991e0;
 }
 
-.btn-secondary {
+.container-product .btn-secondary {
   background: #eeeeee;
   border-radius: 8px;
   padding: 12px 16px;
@@ -100,30 +100,30 @@ menu {
   border: none;
 }
 
-.btn-secondary:hover {
+.container-product .btn-secondary:hover {
   background: #cccccc;
   color: #000000;
 }
 
 /* overwrite bootstrap check box style */
-.form-check ~ .form-check {
+.container-product .form-check ~ .form-check {
   margin-top: 16px;
 }
 
-.form-check-input {
+.container-product .form-check-input {
   height: 24px;
   width: 24px;
   margin-top: 0;
 }
 
-.form-check-label {
+.container-product .form-check-label {
   margin-left: 12px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 }
 
-.form-check-label::before {
+.container-product .form-check-label::before {
   content: '';
   position: absolute;
   border: 2px #808080 solid;
@@ -136,7 +136,10 @@ menu {
   width: 24px;
 }
 
-.form-check .form-check-input:checked ~ .form-check-label::before {
+.container-product
+  .form-check
+  .form-check-input:checked
+  ~ .form-check-label::before {
   content: '';
   position: absolute;
   border: 2px #1e9fd0 solid;
@@ -149,7 +152,10 @@ menu {
   width: 24px;
 }
 
-.form-check .form-check-input:checked ~ .form-check-label::after {
+.container-product
+  .form-check
+  .form-check-input:checked
+  ~ .form-check-label::after {
   content: '';
   color: #678000;
   position: absolute;
